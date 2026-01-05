@@ -50,40 +50,50 @@ to add meaningful neighborhood-level context.
 ---
 
 ## Project Structure
-
 ```text
 CDC_property_valuation/
 │
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── images/
-│
-├── notebooks/
-│   ├── preprocess_tabular.ipynb
+├── property_valuation_code/
+│   │
+│   ├── data/
+│   │   ├── raw/
+│   │   └── processed/
+│   │
+│   ├── outputs/
+│   │   ├── 24114108_final.csv
+│   │   ├── adaptive_fusion_final.pth
+│   │   ├── intermediate_fusion.pth
+│   │   ├── naive_fusion.pth
+│   │   ├── xgboost_model.pkl
+│   │   └── metrics.json
+│   │
+│   ├── src/
+│   │   ├── __pycache__/
+│   │   ├── dataset.py
+│   │   └── models.py
+│   │
+│   ├── visualisation/
+│   │   ├── eda.ipynb
+│   │   ├── geospatial.ipynb
+│   │   ├── grad_cam.ipynb
+│   │   └── results_visualisation.ipynb
+│   │
+│   ├── venv/
+│   │
+│   ├── data_fetcher.py
+│   ├── preprocessing.ipynb
 │   ├── model_training.ipynb
-│   └── predict.ipynb
+│   ├── predict.ipynb
+│   │
+│   ├── requirements.txt
+│   ├── README.md
+│   ├── .gitignore
+│   └── .gitattributes
 │
-├── visualisation/
-│   ├── eda.ipynb
-│   ├── geospatial.ipynb
-│   ├── grad_cam.ipynb
-│   └── results_visualisation.ipynb
-│
-├── outputs/
-│   ├── *.pth / *.pkl
-│   ├── *.csv
-│   └── metrics.json
-│
-├── src/
-│   ├── dataset.py
-│   ├── models.py
-│   └── image_features.py
-│
-├── data_fetcher.py
-├── requirements.txt
-├── README.md
-└── .gitignore
+├── 24114108_report.pdf
+├── 24114108_final.csv
+└── README.md
+
 
 ```
 
@@ -114,6 +124,12 @@ model_training.ipynb
 
 ### 8️ Generate Predictions :- 
 predict.ipynb
+
+
+## Important Note
+
+Before running the code, please update the file and directory paths inside the notebooks
+and Python scripts according to your local directory structure.
 
 ## Evaluation Metrics
 
